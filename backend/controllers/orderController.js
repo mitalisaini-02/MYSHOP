@@ -1,5 +1,5 @@
 import orderModel from "../models/orderModel.js";
-import userModel from "../models/userMOdel.js";
+import userModel from "../models/userModel.js";
 // GETWAY INITAILSE
 import Stripe from "stripe";
 const currency = 'inr';
