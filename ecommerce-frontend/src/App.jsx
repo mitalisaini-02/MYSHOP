@@ -2,7 +2,7 @@ import Home from './pages/Home';
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import './styles/variables.css';
-import ScrollToTop from './pages/ScrollToTop'; // adjust the path as needed
+import ScrollToTop from './pages/scrollToTop'; // adjust the path as needed
 
 import Navbar from './components/Navbar';
 import Cart from './pages/Cart'; // Make sure the path and casing match your file exactly
