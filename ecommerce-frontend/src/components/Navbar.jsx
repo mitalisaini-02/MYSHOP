@@ -4,7 +4,7 @@ import { FaSearch, FaShoppingCart, FaUser } from "react-icons/fa";
 import { FiAlignJustify, FiX } from "react-icons/fi";
 import { ShopContext } from "../context/ShopContext";
 import searchicon from "../assets/search.png";
-
+import logo from "../assets/logo.png";
 function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { setShowSearch, showSearch, setCartItem, navigate, token, setToken, getCartCount } = useContext(ShopContext);
@@ -24,7 +24,7 @@ function Navbar() {
       <div className="flex items-center gap-2 justify-between  mx-auto">
         {/* Logo */}
         <NavLink to="/" className="text-2xl font-bold ">
-          MyShop
+           <img src={logo} alt="MyShop Logo" className="h-12 w-210" />
         </NavLink>
         <div className="flex items-center gap-8">
           {/* Desktop Links */}

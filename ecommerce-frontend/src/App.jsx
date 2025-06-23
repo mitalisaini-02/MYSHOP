@@ -5,7 +5,7 @@ import './styles/variables.css';
 import ScrollToTop from './pages/ScrollToTop'; // adjust the path as needed
 
 import Navbar from './components/Navbar';
-import Cart from './pages/cart'; // Make sure the path and casing match your file exactly
+import Cart from './pages/Cart'; // Make sure the path and casing match your file exactly
 import Login from './pages/Login';
 import { ToastContainer, toast } from 'react-toastify';
 import Contact from './pages/Contact';

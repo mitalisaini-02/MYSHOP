@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Navbar from './component/Navbar';
-import Sidebar from './component/SIdebar'; // fixed casing
+import Sidebar from './component/Sidebar'; // fixed casing
 import { Route, Routes } from 'react-router-dom';
 import Add from './pages/add';
 import Login from './component/Login'; // use uppercase for components

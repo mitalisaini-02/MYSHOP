@@ -1,13 +1,13 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
 
+import { Link } from 'react-router-dom';
+import logo from "../assets/logo.png";
 const Footer1 = () => {
   return (
     <footer className=" bg-transparent text-black">
       <div className="flex flex-col sm:grid grid-cols-[3fr_1fr_1fr] py-6 px-4 sm:px-12 gap-6">
         {/* Logo + Description */}
         <div>
-          <img src="/logo.png" alt="Logo" className="mb-4 w-32" />
+          <img src={logo} alt="Logo" className="mb-4 w-32" />
           <p className="text-gray-600 md:w-2/3 text-sm">
             Discover the best products at unbeatable prices. Fast delivery, easy returns, and secure checkout guaranteed.
           </p>
