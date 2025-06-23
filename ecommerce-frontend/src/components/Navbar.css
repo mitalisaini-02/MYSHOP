@@ -1,0 +1,139 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  background-color: #131921;
+  padding: 10px 20px;
+  color: white;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.nav-logo {
+  width: 100px;
+  height: 40px;
+  background-image: url('/logo.png'); /* replace with your logo path */
+  background-size: contain;
+  background-repeat: no-repeat;
+  flex-shrink: 0;
+}
+
+.address,
+.language,
+.sign-bar,
+.orders,
+.cart {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: white;
+  font-size: 12px;
+}
+
+.search_navbar {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  min-width: 200px;
+  max-width: 600px;
+  margin: 10px 0;
+}
+
+.search-catagory {
+  padding: 5px;
+  border: none;
+}
+
+.search-input {
+  flex: 1;
+  padding: 8px;
+  border: none;
+}
+
+.search-btn {
+  padding: 8px 12px;
+  background-color: #febd69;
+  border: none;
+  cursor: pointer;
+}
+
+.cart-link {
+  display: flex;
+  align-items: center;
+}
+
+.cart-count {
+  background-color: #dcd9d4;
+  border-radius: 50%;
+  padding: 2px 6px;
+  margin-left: 4px;
+  font-weight: bold;
+}
+
+.allitem {
+  background-color: #232f3e;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 10px;
+  gap: 15px;
+}
+
+.allitem a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* ---------- Responsive Styles ---------- */
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search_navbar {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .search-input {
+    width: 100%;
+  }
+
+  .address,
+  .language,
+  .sign-bar,
+  .orders,
+  .cart {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: 5px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .allitem {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-logo {
+    width: 80px;
+    height: 30px;
+  }
+
+  .search-btn {
+    width: 100%;
+    margin-top: 5px;
+  }
+
+  .search_navbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
