@@ -1,32 +1,23 @@
-import mongoose from 'mongoose';
+import mongoose from "mongoose";
+const addressSchema = new mongoose.Schema({
+  street: String,
+  city: String,
+  state: String,
+  postalCode: { type: String },
+  country: String,
+  firstName: String,
+  lastName: String,
+  phone: { type: String},
+}, { _id: false });
 
-const orderSchema = new mongoose.Schema(
-  {
-    userId: { type: String, required: true },
-    items: { type: Array, required: true },
-    amount: { type: Number, required: true },
+const userSchema = new mongoose.Schema({
+  name: { type: String, required: true },
+  email: { type: String, required: true, unique: true },
+  password: { type: String, required: true },
+  
+  cartData: { type: Object, default: {}, minimize: false },
+  address: { type: addressSchema, default: {} },
+});
 
-    // 💡 Change address from string to object
-    address: {
-      firstName: String,
-      lastName: String,
-      email: String,
-      street: String,
-      city: String,
-      state: String,
-      postalCode: String,
-      country: String,
-      phone: String,
-    },
-
-    status: { type: String, default: 'Orderd Placed' },
-    paymentMethod: { type: String, required: true },
-    payment: { type: Boolean, default: false },
-    date: { type: Number, default: Date.now }
-  },
-  { timestamps: true }
-);
-
-// Model export (safe way to avoid re-registration in dev environments)
-const orderModel = mongoose.models.order || mongoose.model('order', orderSchema);
-export default orderModel;
+const userModel = mongoose.models.user || mongoose.model('user', userSchema);
+export default userModel;
