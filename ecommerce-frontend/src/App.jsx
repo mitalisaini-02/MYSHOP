@@ -14,7 +14,7 @@ import Product from './pages/Product';
 import About from './pages/About';
 import Order from './pages/Order';
 
-import Footer1 from './components/Footer';
+import Footer1 from './components/Footer1';
 import SearchBar from './components/SearchBar';
 import Collection from './pages/Collection';
 import "react-toastify/dist/ReactToastify.css";
