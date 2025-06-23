@@ -5,7 +5,7 @@ import { Route, Routes } from 'react-router-dom';
 import Add from './pages/Add';
 import Login from './component/Login'; // use uppercase for components
 import List from './pages/List';
-import Order from './pages/orders';
+import Orders from './pages/Orders';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -32,7 +32,7 @@ const App = () => {
               <Routes>
                 <Route path="/add" element={<Add token={token} />} />
                 <Route path="/list" element={<List token={token} />} />
-                <Route path="/order" element={<Order token={token} />} />
+                <Route path="/order" element={<Orders token={token} />} />
                 <Route path="/" element={<h1>Welcome to Admin Dashboard</h1>} />
               </Routes>
             </div>
