@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Navbar from './component/Navbar';
 import Sidebar from './component/Sidebar'; // fixed casing
 import { Route, Routes } from 'react-router-dom';
-import Add from './pages/add';
+import Add from './pages/Add';
 import Login from './component/Login'; // use uppercase for components
 import List from './pages/List';
 import Order from './pages/orders';
