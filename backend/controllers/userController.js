@@ -2,7 +2,7 @@
 import validator from 'validator';
 import bcrypt from 'bcrypt'; 
 import jwt from 'jsonwebtoken'; 
-import userModel from '../models/userMOdel.js'; 
+import userModel from '../models/userModel.js'; 
 import dotenv from 'dotenv';
 dotenv.config();
 //  console.log("Incoming register body:", req.body);
