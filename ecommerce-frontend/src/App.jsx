@@ -13,7 +13,8 @@ import PlaceOrder from './pages/PlaceOrder';
 import Product from './pages/Product';
 import About from './pages/About';
 import Order from './pages/Order';
-import Footer1 from './components/footer1';
+
+import Footer1 from './components/Footer';
 import SearchBar from './components/SearchBar';
 import Collection from './pages/Collection';
 import "react-toastify/dist/ReactToastify.css";
