@@ -21,7 +21,7 @@ import "react-toastify/dist/ReactToastify.css";
 import Verify from './pages/verify';
 import Profile from './pages/Profile';
 import Delivery from './pages/Info/Delivery';
-import PrivacyPolicy from './pages/Info/PRivacy';
+import PrivacyPolicy from './pages/Info/Privacy';
 import TermsCondition from './pages/Info/term';
 
 function App() {
