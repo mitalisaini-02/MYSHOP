@@ -82,7 +82,7 @@ const Product = () => {
               onClick={() => {
                 if (selectedSize) {
                   addtocart(product._id, selectedSize);
-                  toast.success("Added to cart");
+                
                 } else {
                   toast.error('Please select a size.');
                 }
