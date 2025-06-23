@@ -1,5 +1,5 @@
 import jwt from 'jsonwebtoken';
-import userModel from '../models/userMOdel.js'; // ✅ Fixed typo in filename
+import userModel from '../models/userModel.js'; 
 const authUser = async (req, res, next) => {
   const token = req.headers.token; 
   if (!token) {
