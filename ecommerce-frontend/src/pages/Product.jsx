@@ -5,7 +5,7 @@ import RelatedProducts from '../components/RelatedProducts';
 import { toast } from 'react-toastify';
 
 const Product = () => {
-  const { products, currency, addtocart } = useContext(ShopContext);
+  const { products, currency, addtocart, token } = useContext(ShopContext);
   const { id } = useParams();
   const navigate = useNavigate();
 
@@ -36,9 +36,8 @@ const Product = () => {
               key={index}
               src={img}
               alt={`Thumbnail ${index}`}
-              className={`w-16 h-16 object-cover rounded cursor-pointer border transition ${
-                image === img ? 'border-[#8d8583]' : 'border-gray-300'
-              }`}
+              className={`w-16 h-16 object-cover rounded cursor-pointer border transition ${image === img ? 'border-[#8d8583]' : 'border-gray-300'
+                }`}
               onClick={() => setImage(img)}
             />
           ))}
@@ -82,7 +81,7 @@ const Product = () => {
               onClick={() => {
                 if (selectedSize) {
                   addtocart(product._id, selectedSize);
-                
+
                 } else {
                   toast.error('Please select a size.');
                 }
@@ -94,18 +93,23 @@ const Product = () => {
 
             <button
               onClick={() => {
+                if (!token) {
+                  toast.error('Account not logged in');
+                  navigate('/login'); // redirect to login page
+                  return;
+                }
                 if (selectedSize) {
                   navigate('/place-order', {
                     state: {
-          directBuy: {
-            _id: product._id,
-            image: product.image,
-            name: product.name,
-            price: product.price,
-            _size: selectedSize,
-            quantity: 1,
-          },
-        },
+                      directBuy: {
+                        _id: product._id,
+                        image: product.image,
+                        name: product.name,
+                        price: product.price,
+                        _size: selectedSize,
+                        quantity: 1,
+                      },
+                    },
                   });
                 } else {
                   toast.error('Please select a size.');
