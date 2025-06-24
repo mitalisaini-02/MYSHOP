@@ -12,7 +12,7 @@ const Footer1 = () => {
             Discover the best products at unbeatable prices. Fast delivery, easy returns, and secure checkout guaranteed.
           </p>
         </div>
-https://myshop-backend-mocha.vercel.app/
+
         {/* Company Links */}
         <div>
           <h3 className="text-lg font-semibold mb-4">COMPANY</h3>
