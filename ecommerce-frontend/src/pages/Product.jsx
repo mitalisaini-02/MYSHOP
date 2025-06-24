@@ -79,6 +79,11 @@ const Product = () => {
           <div className="flex gap-4 mt-6">
             <button
               onClick={() => {
+                if (!token) {
+                  toast.error('Account not logged in');
+                  navigate('/login'); // redirect to login page
+                  return;
+                }
                 if (selectedSize) {
                   addtocart(product._id, selectedSize);
 
